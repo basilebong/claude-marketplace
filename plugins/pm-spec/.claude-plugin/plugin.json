@@ -1,8 +1,0 @@
-{
-  "name": "pm-spec",
-  "description": "Acts as a Product Manager to gather requirements, explore the codebase, and create feature specifications with lean user stories and file references.",
-  "version": "2.0.0",
-  "author": {
-    "name": "Basile Bong"
-  }
-}

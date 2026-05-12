@@ -1,0 +1,8 @@
+{
+  "name": "basilebong",
+  "description": "Basile's personal Claude Code skills: pr-reviewer (multi-agent PR review with Security, Logic, UX, Conventions, and Architecture agents plus a separate scoring pass) and pm-spec (PM-style feature specs with lean user stories).",
+  "version": "3.0.0",
+  "author": {
+    "name": "Basile Bong"
+  }
+}

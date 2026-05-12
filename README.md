@@ -1,23 +1,18 @@
 # Claude Code Marketplace
 
-A collection of Claude Code skills for software development workflows.
+A collection of Claude Code skills for software development workflows. All skills are bundled into a single `basilebong` plugin and invoked via the `basilebong:` namespace.
 
 ## Skills
 
 ### pm-spec
 Acts as a Product Manager — explores the codebase, gathers requirements via interactive discovery, and produces a concise feature spec with lean user stories, edge cases, and file references. Runs a panel of reviewer sub-agents (UX, Security, Architecture, Business) before finalizing.
 
-**Usage:** `/pm-spec` or describe a feature you want to spec out.
+**Usage:** `/basilebong:pm-spec` or describe a feature you want to spec out.
 
 ### pr-reviewer
-Spawns specialized sub-agents (Security, Logic, UX, Conventions) to review a PR from GitHub or GitLab. Each issue is scored on a 0-100 confidence scale, filtering to high-confidence findings only.
+Spawns specialized sub-agents (Security, Logic, UX, Conventions, Architecture) to review a PR from GitHub or GitLab. The Architecture reviewer steps back and asks "was there a cleaner way?". A separate Haiku scoring pass rates each finding on a 0-100 confidence scale; the orchestrator filters to high-confidence findings and closes the report with a bullet list of the most important problems and suggested fixes.
 
-**Usage:** `/pr-reviewer` with a PR URL or number.
-
-### pr-comment-analyzer (beta)
-Analyzes PR review comments with two agents debating devil's-advocate style, then produces casual copy-pasteable replies rated FIX or SKIP.
-
-**Usage:** `/pr-comment-analyzer` with a PR URL or number.
+**Usage:** `/basilebong:pr-reviewer` with a PR URL or number.
 
 ## Installation
 

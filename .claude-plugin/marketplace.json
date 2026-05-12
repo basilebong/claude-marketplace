@@ -8,22 +8,10 @@
   },
   "plugins": [
     {
-      "name": "pm-spec",
-      "source": "./plugins/pm-spec",
-      "description": "Acts as a Product Manager to gather requirements, explore the codebase, and create feature specifications with lean user stories and file references.",
-      "version": "2.0.0"
-    },
-    {
-      "name": "pr-reviewer",
-      "source": "./plugins/pr-reviewer",
-      "description": "Spawn a team of specialized agents to review a PR from GitHub or GitLab, score issues on a 0-100 confidence scale, and filter to high-confidence findings.",
-      "version": "2.1.0"
-    },
-    {
-      "name": "pr-comment-analyzer",
-      "source": "./plugins/pr-comment-analyzer",
-      "description": "Analyze PR review comments with two agents debating devil's-advocate style, then produce casual copy-pasteable replies.",
-      "version": "1.0.0"
+      "name": "basilebong",
+      "source": "./plugins/basilebong",
+      "description": "Basile's personal Claude Code skills: pr-reviewer (multi-agent PR review with Security, Logic, UX, Conventions, and Architecture agents plus a separate scoring pass) and pm-spec (PM-style feature specs with lean user stories).",
+      "version": "3.0.0"
     }
   ]
 }
