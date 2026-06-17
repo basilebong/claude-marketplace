@@ -10,9 +10,9 @@ Acts as a Product Manager — explores the codebase, gathers requirements via in
 **Usage:** `/basilebong:pm-spec` or describe a feature you want to spec out.
 
 ### pr-reviewer
-Spawns specialized sub-agents (Security, Logic, UX, Conventions, Architecture) to review a PR from GitHub or GitLab. The Architecture reviewer steps back and asks "was there a cleaner way?". A separate Haiku scoring pass rates each finding on a 0-100 confidence scale; the orchestrator filters to high-confidence findings and closes the report with a bullet list of the most important problems and suggested fixes.
+Reviews the current branch's GitHub or GitLab PR using a single Opus sub-agent. Groups findings into High, Medium, and Minor, and closes with a clear Blocked or Approved verdict. Output is short and scannable — readable in under a minute.
 
-**Usage:** `/basilebong:pr-reviewer` with a PR URL or number.
+**Usage:** `/basilebong:pr-reviewer` (reviews the current branch's PR/MR).
 
 ## Installation
 
