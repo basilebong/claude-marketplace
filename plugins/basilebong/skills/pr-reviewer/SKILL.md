@@ -71,6 +71,8 @@ Reviewer prompt:
 > - **Medium** — a real problem that should be fixed, but not a merge blocker.
 > - **Minor** — a nit or suggestion.
 >
+> Grade honestly against these definitions. NEVER inflate severity to look thorough or to avoid an empty report — a PR with only Minor findings, or none, is a normal and good outcome; say so plainly. When a finding sits between two tiers, pick the lower one. Before you call anything Medium, it must survive two checks: (1) the problem is real for the *actual* caller — not a trusted operator/admin doing something self-inflicted, and not a purely theoretical or defense-in-depth concern; and (2) your proposed fix actually addresses the problem you described (e.g. a parse-time check is no fix for memory already allocated upstream). If either fails, it's Minor or not a finding at all.
+>
 > For each finding give: `file:line`, one sentence on the problem, and one concrete fix — what to actually change, not "consider refactoring". The fix is optional for Minor.
 >
 > Also return a one-line summary of what the PR does. If the PR is clean, say so and return no findings.
@@ -117,5 +119,6 @@ If nothing was found:
 - **Keep it short.** Plain words, one line per finding. No diff dumps, no filler.
 - **Every finding has a `file:line`.** Every High and Medium has a concrete fix.
 - **Blocked needs a High finding.** Nothing else blocks the merge.
+- **Grade honestly, don't pad.** Never round severity up to fill a section or dodge a clean verdict. "No issues found" is a real, good result. Relay the reviewer's grades as-is; when torn between two tiers, the lower one wins.
 - **Review only.** Never edit code.
 - **Label uncommitted findings** with `[uncommitted]` so the author knows they aren't part of the PR yet.
